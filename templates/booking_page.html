@@ -1,0 +1,72 @@
+{% extends 'base.html'%}
+
+{%block head%}
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        padding: 40px;
+    }
+
+    label {
+        display: block;
+        margin-top: 20px;
+    }
+
+    input {
+        width: 300px;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .error {
+        color: red;
+        margin-top: 5px;
+    }
+</style>{%end block%}
+
+{%block body%}
+<label for="from">From:</label>
+<input lists="cities" id="from" name="from" placeholder="Enter Your Depature City">
+
+<label for="from">To:</label>
+<input lists="cities" id="from" name="from" placeholder="Enter Your Depature City">
+
+
+<datalist id="cities">
+    <option value="Chennai">
+    <option value="Coimbatore">
+    <option value="Madurai">
+    <option value="Salem">
+    <option value="Trichy">
+    <option value="Erode">
+    <option value="Vellore">
+    <option value="Tirunelveli">
+    <option value="Nagercoil">
+    <option value="Bangalore">
+    <option value="Hyderabad">
+    <option value="Pondicherry">
+    <option value="Mumbai">
+    <option value="Delhi">
+    <option value="Kolkata">
+    <option value="Ahmedabad">
+    <option value="Kochi">
+    <option value="Tiruppur">
+    <option value="Tuticorin">
+    <option value="Hosur">
+</datalist>
+<p id="error" class="error"></p>
+
+<script>
+    const fromInput = document.getElementById('from');
+    const toInput = document.getElementById('to');
+    const errorText = document.getElementById('error');
+
+    function validateCities() {
+        if (fromInput.value.trim().toLowerCase() === toInput.value.trim().toLowerCase()) {
+            errorText.textContent = "Departure and destination cities cannot be the same.";
+        } else {
+            errorText.textContent = "";
+        }
+    }
+</script>
+{% endblock %}

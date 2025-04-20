@@ -1,0 +1,87 @@
+{% extends 'base.html'%}
+
+{%block head%} {%endblock%}
+
+{%block body%}
+
+<marquee behavior="slide" direction="rtl" scrollamount="30" scrolldelay="-10ms" loop="infinite"
+    style="text-align: center; color: red; font-size: medium;">
+    Welcome to AT
+    BUS service!!.
+    Glad to serve You!!</marquee>
+<div class="jumbotron" style="padding: 13px;">
+    <h1 class="display-4">Hey,There</h1>
+    <p class="lead">This is the app where you can find your dreams travels, to fly to your destination.We have been
+        proud to be a part of your dream journey.<br>Be in-touch with us.<BR>THANK YOU!!!!</p>
+    <hr class="my-4">
+</div>
+
+<h3>New Offers and Buses</h3>
+<div class="row" style="margin: 12px; display: flex; flex-wrap: wrap; justify-content: center;">
+
+    <!-- Card 1 -->
+    <div class="col-12 col-md-3" style="margin: 10px;">
+        <div class="card text-center" style="height: 100%;">
+            <img class="card-img-top" src="{{ url_for('static', filename='assets/kpn.jpg') }}" alt="Card image cap"
+                style="height: 200px; object-fit: cover;">
+            <div class="card-body">
+                <p class="card-text">
+                    Launches a New vehicle in the route of <b>Hosur to Kanyakumari</b><br>
+                    <a href="">Click Here</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-12 col-md-3" style="margin: 10px;">
+        <div class="card text-center" style="height: 100%;">
+            <img class="card-img-top" src="{{ url_for('static', filename='assets/naveen.jpg') }}" alt="Card image cap"
+                style="height: 200px; object-fit: cover;">
+            <div class="card-body">
+                <p class="card-text">
+                    Launches a New vehicle in the route of <b>Chennai to Hyderabad</b><br>
+                    <a href="">Click Here</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-12 col-md-3" style="margin: 10px;">
+        <div class="card text-center" style="height: 100%;">
+            <img class="card-img-top" src="{{ url_for('static', filename='assets/srs.jpg') }}" alt="Card image cap"
+                style="height: 200px; object-fit: cover;">
+            <div class="card-body">
+                <p class="card-text">
+                    Launches a New vehicle in the route of <b>Hyderabad to Chennai</b><br>
+                    <a href="">Click Here</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="col-12 col-md-3" style="margin: 10px;">
+        <div class="card text-center" style="height: 100%;">
+            <img class="card-img-top" src="{{ url_for('static', filename='assets/srs.jpg') }}" alt="Card image cap"
+                style="height: 200px; object-fit: cover;">
+            <div class="card-body">
+                <p class="card-text">
+                    Launches a New vehicle in the route of <b>Salem to Kanyakumari</b><br>
+                    <a href="">Click Here</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+{%endblock%}
